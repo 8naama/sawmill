@@ -29,7 +29,7 @@ public class IPRangeCondition implements Condition {
 		if (!doc.hasField(field)) return false;
 		
 		try {
-            String value = doc.getField(field);
+        	String value = doc.getField(field);
             return isInRange(value);
         } catch (Exception e) {
             return false;
