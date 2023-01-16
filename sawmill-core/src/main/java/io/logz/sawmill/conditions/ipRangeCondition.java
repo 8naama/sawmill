@@ -17,19 +17,19 @@ public class IPRangeCondition implements Condition {
     private final IPAddress rangeEndIP;
 
     public IPRangeCondition(String field, String startIP, String endIP) {
-		if (field == null) {
-			throw new ProcessorConfigurationException("failed to parse IPRange condition, missing field");
-		}
+        if (field == null) {
+            throw new ProcessorConfigurationException("failed to parse IPRange condition, missing field");
+        }
 
         if (IPAddressString(startIP).getAddress() == null) {
             throw new ProcessorConfigurationException("failed to parse ipRange condition, invlid IP provided in rangeStartIP");
         }
 
-		if (IPAddressString(endIP).getAddress() == null) {
+    if (IPAddressString(endIP).getAddress() == null) {
             throw new ProcessorConfigurationException("failed to parse ipRange condition, invlid IP provided in rangeEndIP");
         }
 
-		this.field = field;
+    this.field = field;
         this.rangeStartIP = new IPAddressString(startIP).getAddress();
         this.rangeEndIP = new IPAddressString(endIP).getAddress();
     }
