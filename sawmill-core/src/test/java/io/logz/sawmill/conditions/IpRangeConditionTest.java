@@ -8,4 +8,18 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class IPRangeConditionTest {
 	
+	@Test
+	public void testFieldNotExists() {}
+
+	@Test
+	public void testNotIPValue() {}
+
+	@Test
+	public void testvalidPublicIPValue() {}
+
+	@Test
+	public void testvalidPrivateIPValue() {}
+
+	@Test
+	public void testvEmptyValue() {}
 }
